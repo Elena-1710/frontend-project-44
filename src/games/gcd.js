@@ -1,7 +1,7 @@
 import mainEngine from '../index.js';
 import getRandomArbitrary from '../util.js';
 // Инструкция
-const description = 'Find the greatest common divisor of given numbers';
+const description = 'Find the greatest common divisor of given numbers.';
 
 const GCD = (firstNum, secondNum) => {
   let gcd = 1;

@@ -3,7 +3,7 @@ import getRandomArbitrary from '../util.js';
 
 // функция проверка на четность
 const isEven = (num) => num % 2 === 0;
-const description = 'Answer "yes" if the number is even, otherwise answer "no"';
+const description = 'Answer "yes" if the number is even, otherwise answer "no".';
 const startGames = () => {
   const question = getRandomArbitrary(0, 100);
   // правильный ответ
