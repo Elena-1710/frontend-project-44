@@ -1,9 +1,6 @@
 import mainEngine from '../index.js';
+import getRandomArbitrary from '../util.js';
 
-// получаем случайное число
-function getRandomArbitrary(min, max) {
-  return Math.floor(Math.random() * (max - min) + min);
-}
 // функция проверка на четность
 const isEven = (num) => num % 2 === 0;
 const description = 'Answer "yes" if the number is even, otherwise answer "no"';
