@@ -7,4 +7,3 @@
 ## Asciinema brain-even:
 [![asciicast](https://asciinema.org/a/W2esVdqd0AOGt3FYMNZMeZHZr.svg)](https://asciinema.org/a/W2esVdqd0AOGt3FYMNZMeZHZr)
 
-----
