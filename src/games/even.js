@@ -8,7 +8,7 @@ const startGames = () => {
   const question = getRandomArbitrary(0, 100);
   // правильный ответ
   const qwestionRigth = isEven(question) ? 'yes' : 'no';
-  return [question, qwestionRigth];
+  return { question, qwestionRigth };
 };
 
 const startEvenGame = () => { mainEngine(startGames, description); };
