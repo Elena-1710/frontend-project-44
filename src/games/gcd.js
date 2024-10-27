@@ -3,20 +3,22 @@ import getRandomArbitrary from '../util.js';
 // Инструкция
 const description = 'Find the greatest common divisor of given numbers.';
 
-const GCD = (firstNum, secondNum) => {
+const GCD = (firstNumber, secondNumber) => {
   let gcd = 1;
-  for (let i = 2; i <= firstNum; i += 1) {
-    if (firstNum % i === 0 && secondNum % i === 0) {
+  for (let i = 2; i <= firstNumber; i += 1) {
+    if (firstNumber % i === 0 && secondNumber % i === 0) {
       gcd = i;
     }
   } return gcd;
 };
 const getGCD = () => {
-  const firstNum = getRandomArbitrary(1, 20);
-  const secondNum = getRandomArbitrary(1, 20);
-  const quwestion = `${firstNum} ${secondNum}`;
+  const min = 1;
+  const max = 100;
+  const firstNum = getRandomArbitrary(min, max);
+  const secondNum = getRandomArbitrary(min, max);
+  const question = `${firstNum} ${secondNum}`;
   const questionRigth = GCD(firstNum, secondNum).toString();
-  return { quwestion, questionRigth };
+  return { question, questionRigth };
 };
 
 const playGCD = () => { mainEngine(getGCD, description); };
