@@ -46,5 +46,5 @@ brain-prime
 
 ----
 
-## Asciinema brain-progression:
+## Asciinema brain-prime:
 [![asciicast](https://asciinema.org/a/616BNjA3A6hQCIdwJq4jrYaZz.svg)](https://asciinema.org/a/616BNjA3A6hQCIdwJq4jrYaZz)
