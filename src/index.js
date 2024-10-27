@@ -10,7 +10,7 @@ const mainEngine = (startGames, description) => {
   const roundCount = 3;
   // Задаем 3 шага
   for (let i = 1; i <= roundCount; i += 1) {
-    const { question, questionRigth } = startGames();
+    const [question, questionRigth] = startGames();
     console.log(`Question: ${question}`);
     // ответ пользователя
     const answer = readlineSync.question('Your answer: ');
