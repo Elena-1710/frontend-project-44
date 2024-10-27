@@ -7,8 +7,8 @@ const description = 'Answer "yes" if the number is even, otherwise answer "no".'
 const startGames = () => {
   const question = getRandomArbitrary(0, 100);
   // правильный ответ
-  const qwestionRight = isEven(question) ? 'yes' : 'no';
-  return [question, qwestionRight];
+  const qwestionRigth = isEven(question) ? 'yes' : 'no';
+  return [question, qwestionRigth];
 };
 
 const startEvenGame = () => { mainEngine(startGames, description); };

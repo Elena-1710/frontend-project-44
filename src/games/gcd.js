@@ -15,8 +15,8 @@ const getGCD = () => {
   const firstNum = getRandomArbitrary(1, 20);
   const secondNum = getRandomArbitrary(1, 20);
   const quwestion = `${firstNum} ${secondNum}`;
-  const answer = GCD(firstNum, secondNum).toString();
-  return [quwestion, answer];
+  const questionRigth = GCD(firstNum, secondNum).toString();
+  return [quwestion, questionRigth];
 };
 
 const playGCD = () => { mainEngine(getGCD, description); };

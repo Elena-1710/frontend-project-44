@@ -10,14 +10,14 @@ const mainEngine = (startGames, description) => {
   const roundCount = 3;
   // Задаем 3 шага
   for (let i = 1; i <= roundCount; i += 1) {
-    const [question, qwestionRight] = startGames();
+    const { question, questionRigth } = startGames();
     console.log(`Question: ${question}`);
     // ответ пользователя
     const answer = readlineSync.question('Your answer: ');
-    if (qwestionRight === answer) {
+    if (questionRigth === answer) {
       console.log('Correct!');
     } else {
-      console.log(`'${answer}' is wrong answer ;(. Correct answer was '${qwestionRight}'.
+      console.log(`'${answer}' is wrong answer ;(. Correct answer was '${questionRigth}'.
     Let's try again, ${name}`);
       return;
     }

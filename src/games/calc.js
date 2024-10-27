@@ -24,8 +24,8 @@ const getOperation = () => {
   const firstNum = getRandomArbitrary(0, 100);
   const secondNum = getRandomArbitrary(0, 100);
   const question = `${firstNum} ${operation} ${secondNum}`;
-  const answer = calculate(operation, firstNum, secondNum).toString();
-  return [question, answer];
+  const questionRigth = calculate(operation, firstNum, secondNum).toString();
+  return [question, questionRigth];
 };
 
 const getCalc = () => { mainEngine(getOperation, gescription); };
