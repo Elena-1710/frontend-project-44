@@ -14,7 +14,7 @@ const isPrime = (num) => {
 const getPrime = () => {
   const question = getRandomArbitrary(1, 100);
   const questionRigth = isPrime(question) ? 'yes' : 'no';
-  return [question, questionRigth];
+  return { question, questionRigth };
 };
 
 const playPrime = () => { mainEngine(getPrime, description); };
