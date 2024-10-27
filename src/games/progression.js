@@ -16,7 +16,7 @@ const playProgression = () => {
   const progressionLength = getRandomArbitrary(5, 10);
 
   const progression = getProgression(startNum, progressionStep, progressionLength);
-  const answerIndex = getRandomArbitrary(1, progression.length);
+  const answerIndex = getRandomArbitrary(1, (progression.length - 1));
   const questionRigth = String(progression[answerIndex]);
   progression[answerIndex] = '..';
   const question = progression.join(' ');
