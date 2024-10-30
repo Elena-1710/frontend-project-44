@@ -1,5 +1,5 @@
-import mainEngine from '../index.js';
-import getRandomArbitrary from '../util.js';
+import play from '../index.js';
+import getRandom from '../util.js';
 // Инструкция
 const gescription = 'What is the result of the expression?';
 
@@ -20,13 +20,13 @@ const calculate = (operation, firstNum, secondNum) => {
 
 const getOperation = () => {
   const arithmeticsing = ['+', '-', '*'];
-  const operation = arithmeticsing[getRandomArbitrary(0, arithmeticsing.length - 1)];
-  const firstNum = getRandomArbitrary(0, 100);
-  const secondNum = getRandomArbitrary(0, 100);
+  const operation = arithmeticsing[getRandom(0, arithmeticsing.length - 1)];
+  const firstNum = getRandom(0, 100);
+  const secondNum = getRandom(0, 100);
   const question = `${firstNum} ${operation} ${secondNum}`;
-  const questionRigth = calculate(operation, firstNum, secondNum).toString();
-  return { question, questionRigth };
+  const correntAnswer = calculate(operation, firstNum, secondNum).toString();
+  return { question, correntAnswer };
 };
 
-const getCalc = () => { mainEngine(getOperation, gescription); };
+const getCalc = () => { play(getOperation, gescription); };
 export default getCalc;

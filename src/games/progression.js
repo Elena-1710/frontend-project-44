@@ -1,5 +1,5 @@
-import mainEngine from '../index.js';
-import getRandomArbitrary from '../util.js';
+import play from '../index.js';
+import getRandom from '../util.js';
 
 const description = 'What number is missing in the progression?';
 const getProgression = (startNum, progressionStep, progressionLength) => {
@@ -11,16 +11,16 @@ const getProgression = (startNum, progressionStep, progressionLength) => {
 };
 
 const playProgression = () => {
-  const startNum = getRandomArbitrary(1, 100);
-  const progressionStep = getRandomArbitrary(1, 20);
-  const progressionLength = getRandomArbitrary(5, 10);
+  const startNum = getRandom(1, 100);
+  const progressionStep = getRandom(1, 20);
+  const progressionLength = getRandom(5, 10);
 
   const progression = getProgression(startNum, progressionStep, progressionLength);
-  const answerIndex = getRandomArbitrary(1, (progression.length - 1));
-  const questionRigth = String(progression[answerIndex]);
+  const answerIndex = getRandom(1, (progression.length - 1));
+  const correntAnswer = String(progression[answerIndex]);
   progression[answerIndex] = '..';
   const question = progression.join(' ');
-  return { question, questionRigth };
+  return { question, correntAnswer };
 };
-const startProgression = () => { mainEngine(playProgression, description); };
+const startProgression = () => { play(playProgression, description); };
 export default startProgression;

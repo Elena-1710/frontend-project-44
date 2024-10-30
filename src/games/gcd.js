@@ -1,5 +1,5 @@
-import mainEngine from '../index.js';
-import getRandomArbitrary from '../util.js';
+import play from '../index.js';
+import getRandom from '../util.js';
 // Инструкция
 const description = 'Find the greatest common divisor of given numbers.';
 
@@ -14,13 +14,13 @@ const GCD = (firstNumber, secondNumber) => {
 const getGCD = () => {
   const min = 1;
   const max = 100;
-  const firstNum = getRandomArbitrary(min, max);
-  const secondNum = getRandomArbitrary(min, max);
+  const firstNum = getRandom(min, max);
+  const secondNum = getRandom(min, max);
   const question = `${firstNum} ${secondNum}`;
-  const questionRigth = GCD(firstNum, secondNum).toString();
-  return { question, questionRigth };
+  const correntAnswer = GCD(firstNum, secondNum).toString();
+  return { question, correntAnswer };
 };
 
-const playGCD = () => { mainEngine(getGCD, description); };
+const playGCD = () => { play(getGCD, description); };
 
 export default playGCD;

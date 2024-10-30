@@ -1,16 +1,16 @@
-import mainEngine from '../index.js';
-import getRandomArbitrary from '../util.js';
+import play from '../index.js';
+import getRandom from '../util.js';
 
 // функция проверка на четность
 const isEven = (num) => num % 2 === 0;
 const description = 'Answer "yes" if the number is even, otherwise answer "no".';
 const startGames = () => {
-  const question = getRandomArbitrary(0, 100);
+  const question = getRandom(0, 100);
   // правильный ответ
-  const questionRigth = isEven(question) ? 'yes' : 'no';
-  return { question, questionRigth };
+  const correntAnswer = isEven(question) ? 'yes' : 'no';
+  return { question, correntAnswer };
 };
 
-const startEvenGame = () => { mainEngine(startGames, description); };
+const startEvenGame = () => { play(startGames, description); };
 
 export default startEvenGame;

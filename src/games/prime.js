@@ -1,5 +1,5 @@
-import mainEngine from '../index.js';
-import getRandomArbitrary from '../util.js';
+import play from '../index.js';
+import getRandom from '../util.js';
 
 const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 const isPrime = (num) => {
@@ -12,11 +12,11 @@ const isPrime = (num) => {
 };
 
 const getPrime = () => {
-  const question = getRandomArbitrary(1, 100);
-  const questionRigth = isPrime(question) ? 'yes' : 'no';
-  return { question, questionRigth };
+  const question = getRandom(1, 100);
+  const correntAnswer = isPrime(question) ? 'yes' : 'no';
+  return { question, correntAnswer };
 };
 
-const playPrime = () => { mainEngine(getPrime, description); };
+const playPrime = () => { play(getPrime, description); };
 
 export default playPrime;
