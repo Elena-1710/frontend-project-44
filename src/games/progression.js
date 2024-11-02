@@ -10,7 +10,7 @@ const getProgression = (startNum, progressionStep, progressionLength) => {
   return progression;
 };
 
-const playProgression = () => {
+const generateRound = () => {
   const startNum = getRandom(1, 100);
   const progressionStep = getRandom(1, 20);
   const progressionLength = getRandom(5, 10);
@@ -22,5 +22,5 @@ const playProgression = () => {
   const question = progression.join(' ');
   return { question, correntAnswer };
 };
-const startProgression = () => { play(playProgression, description); };
-export default startProgression;
+const playProgressionGame = () => { play(generateRound, description); };
+export default playProgressionGame;

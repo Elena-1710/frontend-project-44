@@ -18,7 +18,7 @@ const calculate = (operation, firstNum, secondNum) => {
   }
 };
 
-const getOperation = () => {
+const generateRound = () => {
   const arithmeticsing = ['+', '-', '*'];
   const operation = arithmeticsing[getRandom(0, arithmeticsing.length - 1)];
   const firstNum = getRandom(0, 100);
@@ -28,5 +28,5 @@ const getOperation = () => {
   return { question, correntAnswer };
 };
 
-const getCalc = () => { play(getOperation, description); };
-export default getCalc;
+const playCalcGame = () => { play(generateRound, description); };
+export default playCalcGame;

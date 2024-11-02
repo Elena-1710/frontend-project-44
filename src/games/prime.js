@@ -11,12 +11,12 @@ const isPrime = (num) => {
   return true;
 };
 
-const getPrime = () => {
+const generateRound = () => {
   const question = getRandom(1, 100);
   const correntAnswer = isPrime(question) ? 'yes' : 'no';
   return { question, correntAnswer };
 };
 
-const playPrime = () => { play(getPrime, description); };
+const playPrimeGame = () => { play(generateRound, description); };
 
-export default playPrime;
+export default playPrimeGame;
