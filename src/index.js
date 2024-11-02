@@ -10,13 +10,13 @@ const play = (generateRound, description) => {
     const { question, correntAnswer } = generateRound();
     console.log(`Question: ${question}`);
     const answer = readlineSync.question('Your answer: ');
-    if (correntAnswer === answer) {
-      console.log('Correct!');
-    } else {
+    if (correntAnswer !== answer) {
       console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correntAnswer}'. \nLet's try again, ${name}!`);
       return;
     }
+    console.log('Correct!');
   }
   console.log(`Congratulations, ${name}!`);
 };
+
 export default play;
