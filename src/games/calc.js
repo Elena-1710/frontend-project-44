@@ -1,7 +1,7 @@
 import play from '../index.js';
 import getRandom from '../util.js';
 // Инструкция
-const gescription = 'What is the result of the expression?';
+const description = 'What is the result of the expression?';
 
 // выполним действия '+', '-', '*'
 
@@ -28,5 +28,5 @@ const getOperation = () => {
   return { question, correntAnswer };
 };
 
-const getCalc = () => { play(getOperation, gescription); };
+const getCalc = () => { play(getOperation, description); };
 export default getCalc;
